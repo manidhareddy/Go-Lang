@@ -12,4 +12,11 @@ func main() {
 	fmt.Printf("var b %T = %q\n", b, b)
 	fmt.Printf("var c %T = %+v\n", c, c)
 	fmt.Printf("var d %T = %+v\n\n", d, d)
+	//Multiple Assignment
+
+	j, k, l := "shark", 2.05, 15
+	fmt.Println(j)
+	fmt.Println(k)
+	fmt.Println(l)
+
 }
