@@ -21,7 +21,7 @@ var Email string //outside the package
 var passWord string // inside the package itself
 
 scope also plays an important role in varaibles
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 var names []string = {"martin","steve","anand","manidhar"}
 
 for i,n := range names{
