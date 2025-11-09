@@ -118,7 +118,7 @@ mkdir -p ~/code/{src,bin,pkg}
 
 ---
 
-- **go ru** Compile temporarily and  run that for me. I also compile any third party libraries. // it will take main file path
+- **go run** Compile temporarily and  run that for me. I also compile any third party libraries. // it will take main file path
 - **go build** It will take actual package path. It finds main package with main function that it's going to compile that as an executable.
 - **go install** genrates executable in bin folder.
 
