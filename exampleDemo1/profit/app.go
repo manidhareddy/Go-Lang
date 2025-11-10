@@ -6,20 +6,13 @@ import (
 )
 
 func BaicsCalculation(){
-        var revenue float64 //take input from user
-        var expenses float64
-        var taxRate float64
-
         //Take input
 
-        fmt.Print("Enter revenue Amount : ")
-        fmt.Scan(&revenue)//pass address
+	revenue := printAndScan("Enter revenue Amount : ");
 
-        fmt.Print("Enter expenses : " )
-        fmt.Scan(&expenses);
+	expenses := printAndScan("Enter expenses : ")
 
-        fmt.Print("Enter tax rate : ")
-        fmt.Scan(&taxRate);
+	taxRate := printAndScan("Enter tax rate : ")
 
         EBT := calculateEBT(revenue ,expenses)
 
@@ -31,10 +24,16 @@ func BaicsCalculation(){
 
         fmt.Printf("After Tax : %v \n",afterTax)
 
-	fmt.Printf("Ratio : %v \n",ratio);
+	fmt.Printf("Ratio : %.2f \n",ratio);
 
 
 
+}
+func printAndScan(str string) float64{
+	var takeInput float64
+	fmt.Print(str)
+	fmt.Scan(&takeInput)
+	return takeInput
 }
 
 func calculateEBT(revenue,expenses float64) float64{
