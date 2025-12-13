@@ -50,3 +50,24 @@ for i,n := range names{
 - Type conversions
     - destinationType(variable).
     - use ** strconv ** package for strings.
+
+## Special types:-
+- bool
+- error
+- pointers
+
+## Initialization
+Go initializes all variables to "zero" by default if you don't:
+    - All numerical types get 0 (float0.0, complex 0i).
+    - bool gets false
+    - string gets "" (the empty string, lenght 0).
+    - Everything else gets nil:
+        - pointers
+        - slices
+        - maps
+        - channels
+        - functions (function variables)
+        - interfaces
+    - For aggregate types, all members get their "zero" values.
+
+Fscanln - which will scan a line of text ending with new line
