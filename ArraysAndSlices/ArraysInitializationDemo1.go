@@ -8,9 +8,9 @@ func do (z[5]int){
 }
 
 func main(){
-	c := [5] int{0,0,0,0}
-	fmt.Printf("%T    -> %[1]v \n",c)
-	do(c)
+	c := [...] int{0,0,0,0}
+	fmt.Printf("%T    -> %[1]v  , %d\n",c,cap(c))
+//	do(c)
 	
 
 	fmt.Printf("%T    -> %[1]v\n ",c)
