@@ -1,0 +1,2 @@
+some text in this files
+reading from file a

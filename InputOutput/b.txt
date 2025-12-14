@@ -1,0 +1,2 @@
+some other text in this file
+read from file b
