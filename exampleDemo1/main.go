@@ -7,9 +7,9 @@ import (
 
 //something string = "value"
 
-func main(){
+func main() {
 	var something string = "value"
-	fmt.Println("using some value " ,something);
-	fmt.Println("profit Calculator")	
+	fmt.Println("using some value ", something)
+	fmt.Println("profit Calculator")
 	profit.BaicsCalculation()
 }
