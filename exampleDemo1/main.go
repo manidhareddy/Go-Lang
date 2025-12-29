@@ -8,8 +8,8 @@ import (
 //something string = "value"
 
 func main() {
-	var something string = "value"
+	var something  = "value"
 	fmt.Println("using some value ", something)
-	fmt.Println("profit Calculator")
+	fmt.Println("profit Calculator");
 	profit.BaicsCalculation()
 }
