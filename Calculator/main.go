@@ -1,8 +1,9 @@
 package main
 
 import (
-	"example.com/calculator/prices"
 	"fmt"
+
+	"example.com/calculator/prices"
 )
 
 func main() {
@@ -11,6 +12,7 @@ func main() {
 
 	for _, taxRate := range taxRates {
 		priceJob := prices.NewTaxIncludedPriceJob(taxRate)
+		priceJob.LoadData()
 		priceJob.Process()
 	}
 
