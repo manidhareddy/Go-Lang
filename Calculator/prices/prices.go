@@ -2,12 +2,14 @@ package prices
 
 import (
 	"fmt"
+
+	"example.com/calculator/writeData"
 )
 
 type TaxIncludedPriceJob struct {
 	TaxRate           float64
 	InputPrices       []float64
-	TaxIncludedPrices map[string]float64
+	TaxIncludedPrices map[string]string
 }
 
 // method
@@ -18,7 +20,13 @@ func (job TaxIncludedPriceJob) Process() {
 		taxAbleAmount := price * (1 + job.TaxRate)
 		result[fmt.Sprintf("%.2f", price)] = fmt.Sprintf("%.2f", taxAbleAmount)
 	}
-	fmt.Println(result)
+	job.TaxIncludedPrices = result
+	err := writeData.WriteToJson(fmt.Sprintf("result_%v.json", job.TaxRate*100), job)
+
+	if err != nil {
+		return
+	}
+
 }
 
 // return a pointer
