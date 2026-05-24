@@ -1,10 +1,7 @@
 package prices
 
 import (
-	"bufio"
 	"fmt"
-	"os"
-	"strconv"
 )
 
 type TaxIncludedPriceJob struct {
@@ -31,7 +28,9 @@ func NewTaxIncludedPriceJob(taxRate float64) *TaxIncludedPriceJob {
 		TaxRate:     taxRate,
 	}
 }
-func (job *TaxIncludedPriceJob) LoadData() {
+
+//Moved to another package
+/*func (job *TaxIncludedPriceJob) LoadData() {
 	file, err := os.Open("prices.txt")
 	if err != nil {
 		fmt.Println("An error occurred!")
@@ -54,4 +53,4 @@ func (job *TaxIncludedPriceJob) LoadData() {
 		fmt.Println(err)
 		return
 	}
-}
+}*/

@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"example.com/calculator/loadData"
 	"example.com/calculator/prices"
 )
 
@@ -12,7 +13,7 @@ func main() {
 
 	for _, taxRate := range taxRates {
 		priceJob := prices.NewTaxIncludedPriceJob(taxRate)
-		priceJob.LoadData()
+		loadData.LoadData(priceJob)
 		priceJob.Process()
 	}
 
