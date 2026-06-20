@@ -18,6 +18,8 @@ It was first released in **November 2009**.
 You can use any **IDE (Integrated Development Environment)** to write Go code.  
 Popular options include **GoLand, VS Code, and Vim**.
 
+The LSP provides language support features like formatting, code hints, recommendations, and tooling support for Go development environments
+
 ---
 
 ## Installation
