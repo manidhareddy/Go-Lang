@@ -2,12 +2,14 @@ package main
 
 import "fmt"
 
-func main(){
+func main() {
 	value := 20
 
-	ptr := &value;
+	var ptr *int = &value
+
+	fmt.Printf("Value is %d , and address is %p\n", value, ptr)
 
 	*ptr = 40
 
-	fmt.Println("value " ,value)
+	fmt.Println("value ", value)
 }
